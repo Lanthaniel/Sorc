@@ -12,6 +12,7 @@
 		849AB02C1CD2CD8400159D74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849AB02A1CD2CD8400159D74 /* Main.storyboard */; };
 		849AB02E1CD2CD8400159D74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849AB02D1CD2CD8400159D74 /* Assets.xcassets */; };
 		849AB0311CD2CD8400159D74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849AB02F1CD2CD8400159D74 /* LaunchScreen.storyboard */; };
+		849AB0391CD2D6CA00159D74 /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 849AB0381CD2D6CA00159D74 /* Minecraft.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		849AB02D1CD2CD8400159D74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		849AB0301CD2CD8400159D74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		849AB0321CD2CD8400159D74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		849AB0381CD2D6CA00159D74 /* Minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Minecraft.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		849AB0251CD2CD8400159D74 /* Sorc */ = {
 			isa = PBXGroup;
 			children = (
+				849AB0381CD2D6CA00159D74 /* Minecraft.ttf */,
 				849AB0261CD2CD8400159D74 /* AppDelegate.swift */,
 				849AB0281CD2CD8400159D74 /* ViewController.swift */,
 				849AB02A1CD2CD8400159D74 /* Main.storyboard */,
@@ -124,6 +127,7 @@
 			files = (
 				849AB0311CD2CD8400159D74 /* LaunchScreen.storyboard in Resources */,
 				849AB02E1CD2CD8400159D74 /* Assets.xcassets in Resources */,
+				849AB0391CD2D6CA00159D74 /* Minecraft.ttf in Resources */,
 				849AB02C1CD2CD8400159D74 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

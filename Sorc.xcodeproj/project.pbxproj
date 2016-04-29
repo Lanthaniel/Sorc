@@ -13,6 +13,9 @@
 		849AB02E1CD2CD8400159D74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849AB02D1CD2CD8400159D74 /* Assets.xcassets */; };
 		849AB0311CD2CD8400159D74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849AB02F1CD2CD8400159D74 /* LaunchScreen.storyboard */; };
 		849AB0391CD2D6CA00159D74 /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 849AB0381CD2D6CA00159D74 /* Minecraft.ttf */; };
+		849C0CFC1CD3E3FB00056476 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C0CFB1CD3E3FB00056476 /* Character.swift */; };
+		849C0CFE1CD3E60500056476 /* Orc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C0CFD1CD3E60500056476 /* Orc.swift */; };
+		849C0D001CD3EB9100056476 /* Soldier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C0CFF1CD3EB9100056476 /* Soldier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		849AB0301CD2CD8400159D74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		849AB0321CD2CD8400159D74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		849AB0381CD2D6CA00159D74 /* Minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Minecraft.ttf; sourceTree = "<group>"; };
+		849C0CFB1CD3E3FB00056476 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		849C0CFD1CD3E60500056476 /* Orc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Orc.swift; sourceTree = "<group>"; };
+		849C0CFF1CD3EB9100056476 /* Soldier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Soldier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				849AB02D1CD2CD8400159D74 /* Assets.xcassets */,
 				849AB02F1CD2CD8400159D74 /* LaunchScreen.storyboard */,
 				849AB0321CD2CD8400159D74 /* Info.plist */,
+				849C0CFB1CD3E3FB00056476 /* Character.swift */,
+				849C0CFD1CD3E60500056476 /* Orc.swift */,
+				849C0CFF1CD3EB9100056476 /* Soldier.swift */,
 			);
 			path = Sorc;
 			sourceTree = "<group>";
@@ -139,7 +148,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849C0CFE1CD3E60500056476 /* Orc.swift in Sources */,
+				849C0D001CD3EB9100056476 /* Soldier.swift in Sources */,
 				849AB0291CD2CD8400159D74 /* ViewController.swift in Sources */,
+				849C0CFC1CD3E3FB00056476 /* Character.swift in Sources */,
 				849AB0271CD2CD8400159D74 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,6 +302,7 @@
 				849AB0371CD2CD8400159D74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

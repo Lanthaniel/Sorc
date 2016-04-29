@@ -38,6 +38,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text-holder" translatesAutoresizingMaskIntoConstraints="NO" id="ZV5-ck-r0P">
                                 <rect key="frame" x="104" y="533" width="393" height="60"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="393" id="41t-Gi-bwo"/>
                                     <constraint firstAttribute="height" constant="60" id="RKJ-2h-MdW"/>
                                 </constraints>
                             </imageView>
@@ -70,13 +71,13 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="fTB-jQ-Mjp" userLabel="Stack View Attack">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="fTB-jQ-Mjp" userLabel="Stack View Attack">
                                 <rect key="frame" x="65" y="30" width="470" height="68"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MjI-VN-jRu" userLabel="Stack View P1 ">
                                         <rect key="frame" x="0.0" y="0.0" width="111" height="68"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wME-6a-uVZ" userLabel="player1AttackButton">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wME-6a-uVZ" userLabel="player1AttackButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="111" height="41"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="Jfy-kv-4IP"/>
@@ -84,8 +85,11 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="17"/>
                                                 <state key="normal" title="ATTACK" backgroundImage="player1attackbtn"/>
+                                                <connections>
+                                                    <action selector="onAttackPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9ye-4F-0b9"/>
+                                                </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 HP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuu-6U-gSn">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 HP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuu-6U-gSn" userLabel="player1 HP">
                                                 <rect key="frame" x="27" y="41" width="58" height="27"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="27" id="56f-Lc-sUr"/>
@@ -101,7 +105,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WU2-tE-Ymh" userLabel="Stack View P2">
                                         <rect key="frame" x="359" y="0.0" width="111" height="68"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5T-Di-ExT" userLabel="player2AttackButton">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5T-Di-ExT" userLabel="player2AttackButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="111" height="41"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="111" id="Pe4-9W-45y"/>
@@ -109,8 +113,11 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="17"/>
                                                 <state key="normal" title="ATTACK" backgroundImage="player2attackbtn"/>
+                                                <connections>
+                                                    <action selector="onAttackPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JLt-ZB-das"/>
+                                                </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 HP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mER-aa-1Hf">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 HP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mER-aa-1Hf" userLabel="player2 HP">
                                                 <rect key="frame" x="27" y="41" width="58" height="27"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="58" id="7V1-m7-hrV"/>
@@ -134,6 +141,7 @@
                             <constraint firstAttribute="trailing" secondItem="F4z-SY-rXW" secondAttribute="trailing" id="C2w-c4-ggB"/>
                             <constraint firstItem="h7e-1j-bPd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CLV-CQ-EUF"/>
                             <constraint firstAttribute="trailing" secondItem="fTB-jQ-Mjp" secondAttribute="trailing" constant="65" id="KcJ-Lh-qpw"/>
+                            <constraint firstItem="ZV5-ck-r0P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MMt-LW-JbM"/>
                             <constraint firstItem="F4z-SY-rXW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="P8X-ZW-3L3"/>
                             <constraint firstItem="h7e-1j-bPd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="65" id="Q3H-pT-PVm"/>
                             <constraint firstItem="fTB-jQ-Mjp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SUB-Oc-Hu5"/>
@@ -148,7 +156,22 @@
                             <constraint firstItem="ZV5-ck-r0P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="104" id="nAN-SK-zdm"/>
                             <constraint firstAttribute="trailing" secondItem="h7e-1j-bPd" secondAttribute="trailing" constant="65" id="qGU-m9-FaJ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4QM-gw-dBj"/>
+                                <exclude reference="nAN-SK-zdm"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="p1AttackBtn" destination="wME-6a-uVZ" id="IFq-OE-TXd"/>
+                        <outlet property="p1HpLbl" destination="yuu-6U-gSn" id="caA-Ki-UUc"/>
+                        <outlet property="p1Image" destination="axS-Kl-Svl" id="KQh-JU-gbp"/>
+                        <outlet property="p2AttackBtn" destination="r5T-Di-ExT" id="KkP-Wb-zfQ"/>
+                        <outlet property="p2HpLbl" destination="mER-aa-1Hf" id="kao-hB-BMT"/>
+                        <outlet property="p2Image" destination="QjF-dq-A7X" id="EAw-Ur-yUW"/>
+                        <outlet property="statusText" destination="U1J-jE-6XD" id="0qQ-MA-WZw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

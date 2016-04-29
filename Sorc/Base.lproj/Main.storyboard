@@ -52,20 +52,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="lastBaseline" translatesAutoresizingMaskIntoConstraints="NO" id="h7e-1j-bPd" userLabel="Stack View Characters">
-                                <rect key="frame" x="65" y="365" width="470" height="145"/>
+                                <rect key="frame" x="65" y="370" width="470" height="140"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="enemy" translatesAutoresizingMaskIntoConstraints="NO" id="axS-Kl-Svl">
-                                        <rect key="frame" x="0.0" y="6" width="108" height="139"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="108" height="140"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="139" id="8G4-Nv-0cf"/>
+                                            <constraint firstAttribute="height" constant="140" id="8G4-Nv-0cf"/>
                                             <constraint firstAttribute="width" constant="108" id="tW0-rW-udy"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player" translatesAutoresizingMaskIntoConstraints="NO" id="QjF-dq-A7X">
-                                        <rect key="frame" x="340" y="0.0" width="130" height="145"/>
+                                        <rect key="frame" x="340" y="0.0" width="130" height="140"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="130" id="Adb-cK-uJ7"/>
-                                            <constraint firstAttribute="height" constant="145" id="Dfa-TF-VfG"/>
+                                            <constraint firstAttribute="height" constant="140" id="Dfa-TF-VfG"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>

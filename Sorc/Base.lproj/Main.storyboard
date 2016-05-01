@@ -11,6 +11,7 @@
             <string>Minecraft</string>
             <string>Minecraft</string>
             <string>Minecraft</string>
+            <string>Minecraft</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -132,14 +133,30 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0DC-A5-bMl">
+                                <rect key="frame" x="174" y="39" width="253" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="Sam-Pf-YGN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="21"/>
+                                <state key="normal" title="Click to play again." backgroundImage="text-holder">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onResetPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RPj-iw-wHD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="U1J-jE-6XD" firstAttribute="centerX" secondItem="ZV5-ck-r0P" secondAttribute="centerX" id="33x-YS-YAV"/>
                             <constraint firstAttribute="trailing" secondItem="ZV5-ck-r0P" secondAttribute="trailing" constant="103" id="4QM-gw-dBj"/>
+                            <constraint firstAttribute="trailing" secondItem="0DC-A5-bMl" secondAttribute="trailing" constant="65" id="7H7-o7-Yis"/>
+                            <constraint firstItem="0DC-A5-bMl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9JV-eu-V9t"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="F4z-SY-rXW" secondAttribute="bottom" id="C0A-qd-aPF"/>
                             <constraint firstAttribute="trailing" secondItem="F4z-SY-rXW" secondAttribute="trailing" id="C2w-c4-ggB"/>
                             <constraint firstItem="h7e-1j-bPd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CLV-CQ-EUF"/>
+                            <constraint firstItem="0DC-A5-bMl" firstAttribute="centerY" secondItem="fTB-jQ-Mjp" secondAttribute="centerY" id="KTe-4G-2z0"/>
                             <constraint firstAttribute="trailing" secondItem="fTB-jQ-Mjp" secondAttribute="trailing" constant="65" id="KcJ-Lh-qpw"/>
                             <constraint firstItem="ZV5-ck-r0P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MMt-LW-JbM"/>
                             <constraint firstItem="F4z-SY-rXW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="P8X-ZW-3L3"/>
@@ -149,15 +166,21 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xmc-DG-N3J" secondAttribute="bottom" id="XHy-tj-XFF"/>
                             <constraint firstItem="fTB-jQ-Mjp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="65" id="Xg5-b1-grq"/>
                             <constraint firstItem="fTB-jQ-Mjp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="YB9-rM-1Pr"/>
+                            <constraint firstItem="0DC-A5-bMl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="19" id="YPL-s7-7sP"/>
                             <constraint firstItem="U1J-jE-6XD" firstAttribute="centerY" secondItem="ZV5-ck-r0P" secondAttribute="centerY" id="aLK-xf-Qe8"/>
                             <constraint firstItem="F4z-SY-rXW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="g5o-fG-shL"/>
                             <constraint firstItem="xmc-DG-N3J" firstAttribute="top" secondItem="h7e-1j-bPd" secondAttribute="bottom" constant="15" id="jDF-4f-5mL"/>
                             <constraint firstItem="xmc-DG-N3J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="k6A-Yv-ydI"/>
                             <constraint firstItem="ZV5-ck-r0P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="104" id="nAN-SK-zdm"/>
+                            <constraint firstItem="0DC-A5-bMl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nrp-Jj-Xtm"/>
                             <constraint firstAttribute="trailing" secondItem="h7e-1j-bPd" secondAttribute="trailing" constant="65" id="qGU-m9-FaJ"/>
+                            <constraint firstItem="0DC-A5-bMl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="65" id="yqQ-Ig-odR"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="9JV-eu-V9t"/>
+                                <exclude reference="KTe-4G-2z0"/>
+                                <exclude reference="nrp-Jj-Xtm"/>
                                 <exclude reference="4QM-gw-dBj"/>
                                 <exclude reference="nAN-SK-zdm"/>
                             </mask>
@@ -170,6 +193,7 @@
                         <outlet property="p2AttackBtn" destination="r5T-Di-ExT" id="KkP-Wb-zfQ"/>
                         <outlet property="p2HpLbl" destination="mER-aa-1Hf" id="kao-hB-BMT"/>
                         <outlet property="p2Image" destination="QjF-dq-A7X" id="EAw-Ur-yUW"/>
+                        <outlet property="resetBtn" destination="0DC-A5-bMl" id="MEP-Al-ehq"/>
                         <outlet property="statusText" destination="U1J-jE-6XD" id="0qQ-MA-WZw"/>
                     </connections>
                 </viewController>

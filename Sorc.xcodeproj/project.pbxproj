@@ -16,6 +16,13 @@
 		849C0CFC1CD3E3FB00056476 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C0CFB1CD3E3FB00056476 /* Character.swift */; };
 		849C0CFE1CD3E60500056476 /* Orc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C0CFD1CD3E60500056476 /* Orc.swift */; };
 		849C0D001CD3EB9100056476 /* Soldier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C0CFF1CD3EB9100056476 /* Soldier.swift */; };
+		849C0D021CD4101700056476 /* bg.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 849C0D011CD4101700056476 /* bg.mp3 */; };
+		849C0D051CD414BE00056476 /* orcDeath.wav in Resources */ = {isa = PBXBuildFile; fileRef = 849C0D031CD414BE00056476 /* orcDeath.wav */; };
+		849C0D061CD414BE00056476 /* soldierDeath.wav in Resources */ = {isa = PBXBuildFile; fileRef = 849C0D041CD414BE00056476 /* soldierDeath.wav */; };
+		84F1F4F71CD6C1DA00426BB4 /* Spear.wav in Resources */ = {isa = PBXBuildFile; fileRef = 84F1F4F61CD6C1DA00426BB4 /* Spear.wav */; };
+		84F1F4F91CD6C2B800426BB4 /* Club.wav in Resources */ = {isa = PBXBuildFile; fileRef = 84F1F4F81CD6C2B800426BB4 /* Club.wav */; };
+		84F1F4FB1CD6C3BA00426BB4 /* MaleGrunt.wav in Resources */ = {isa = PBXBuildFile; fileRef = 84F1F4FA1CD6C3BA00426BB4 /* MaleGrunt.wav */; };
+		84F1F4FD1CD6C40E00426BB4 /* OrcGrunt.wav in Resources */ = {isa = PBXBuildFile; fileRef = 84F1F4FC1CD6C40E00426BB4 /* OrcGrunt.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +37,13 @@
 		849C0CFB1CD3E3FB00056476 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		849C0CFD1CD3E60500056476 /* Orc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Orc.swift; sourceTree = "<group>"; };
 		849C0CFF1CD3EB9100056476 /* Soldier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Soldier.swift; sourceTree = "<group>"; };
+		849C0D011CD4101700056476 /* bg.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bg.mp3; sourceTree = "<group>"; };
+		849C0D031CD414BE00056476 /* orcDeath.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = orcDeath.wav; sourceTree = "<group>"; };
+		849C0D041CD414BE00056476 /* soldierDeath.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = soldierDeath.wav; sourceTree = "<group>"; };
+		84F1F4F61CD6C1DA00426BB4 /* Spear.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Spear.wav; sourceTree = "<group>"; };
+		84F1F4F81CD6C2B800426BB4 /* Club.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Club.wav; sourceTree = "<group>"; };
+		84F1F4FA1CD6C3BA00426BB4 /* MaleGrunt.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = MaleGrunt.wav; sourceTree = "<group>"; };
+		84F1F4FC1CD6C40E00426BB4 /* OrcGrunt.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = OrcGrunt.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +76,13 @@
 		849AB0251CD2CD8400159D74 /* Sorc */ = {
 			isa = PBXGroup;
 			children = (
+				84F1F4FA1CD6C3BA00426BB4 /* MaleGrunt.wav */,
+				84F1F4FC1CD6C40E00426BB4 /* OrcGrunt.wav */,
+				84F1F4F81CD6C2B800426BB4 /* Club.wav */,
+				84F1F4F61CD6C1DA00426BB4 /* Spear.wav */,
+				849C0D011CD4101700056476 /* bg.mp3 */,
+				849C0D031CD414BE00056476 /* orcDeath.wav */,
+				849C0D041CD414BE00056476 /* soldierDeath.wav */,
 				849AB0381CD2D6CA00159D74 /* Minecraft.ttf */,
 				849AB0261CD2CD8400159D74 /* AppDelegate.swift */,
 				849AB0281CD2CD8400159D74 /* ViewController.swift */,
@@ -108,6 +129,7 @@
 				TargetAttributes = {
 					849AB0221CD2CD8400159D74 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = PBDXZS93T4;
 					};
 				};
 			};
@@ -134,8 +156,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F1F4F71CD6C1DA00426BB4 /* Spear.wav in Resources */,
+				849C0D051CD414BE00056476 /* orcDeath.wav in Resources */,
+				84F1F4FD1CD6C40E00426BB4 /* OrcGrunt.wav in Resources */,
 				849AB0311CD2CD8400159D74 /* LaunchScreen.storyboard in Resources */,
+				849C0D061CD414BE00056476 /* soldierDeath.wav in Resources */,
+				84F1F4FB1CD6C3BA00426BB4 /* MaleGrunt.wav in Resources */,
+				84F1F4F91CD6C2B800426BB4 /* Club.wav in Resources */,
 				849AB02E1CD2CD8400159D74 /* Assets.xcassets in Resources */,
+				849C0D021CD4101700056476 /* bg.mp3 in Resources */,
 				849AB0391CD2D6CA00159D74 /* Minecraft.ttf in Resources */,
 				849AB02C1CD2CD8400159D74 /* Main.storyboard in Resources */,
 			);
@@ -265,10 +294,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Sorc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Karabensh.Sorc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -276,10 +308,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Sorc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Karabensh.Sorc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

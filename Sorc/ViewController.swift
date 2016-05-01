@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -27,6 +28,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var p1Image: UIImageView!
     @IBOutlet weak var p2Image: UIImageView!
     
+    //The game restart button
+    @IBOutlet weak var resetBtn: UIButton!
     
     
     //Properties
@@ -34,18 +37,14 @@ class ViewController: UIViewController {
     var p2: Character!
     var currentAttacker: Character!
     var currentDefender: Character!
+    var bgMusic: AVAudioPlayer!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //create the players
-        p1 = Orc()
-        p2 = Soldier()
-        
-        //initialize the player HP bars
-        p1HpLbl.text = "\(p1.hp) HP"
-        p2HpLbl.text = "\(p2.hp) HP"
+        setUpAudio()
+        setUpGame()
         
     }
 
@@ -69,6 +68,7 @@ class ViewController: UIViewController {
             
             if(currentDefender.attemptAttack(currentAttacker.attackPwr)) {
                 statusText.text = "\(currentAttacker.name) attacked \(currentDefender.name)!"
+                currentAttacker.attackSound.play();
             }
             
             p1HpLbl.text = "\(p1.hp) HP"
@@ -79,25 +79,88 @@ class ViewController: UIViewController {
     
     }
 
+    @IBAction func onResetPressed(sender: AnyObject) {
+        setUpGame()
+    }
 
     
     func isPlayerDead() {
         if(!p1.isAlive()) {
+            p1.deathSound.play()
             p1Image.hidden = true
             
             statusText.text = "\(p2.name) has won the battle!"
+            gameIsOver(p2Image)
         }
         if(!p2.isAlive()) {
+            p2.deathSound.play()
             p2Image.hidden = true
             
             statusText.text = "\(p1.name) has won the battle!"
+            gameIsOver(p1Image)
         }
+        
     }
     
+    //The game is over, so hide game components and show reset button
+    func gameIsOver(winner: UIImageView!) {
+        p1Image.hidden = true
+        p2Image.hidden = true
+        p1HpLbl.hidden = true
+        p2HpLbl.hidden = true
+        p1AttackBtn.hidden = true
+        p2AttackBtn.hidden = true
+        resetBtn.hidden = false
+        winner.hidden = false
+    }
+    
+    
+    //re-enables the attack button
     func enableAttackButton(timer: NSTimer) {
         let btn = timer.userInfo as! UIButton!
         btn.enabled = true
     }
     
+    //for game initialization
+    func setUpGame() {
+        
+        //create the players
+        p1 = Orc()
+        p2 = Soldier()
+        
+        //initialize the text labels
+        p1HpLbl.text = "\(p1.hp) HP"
+        p2HpLbl.text = "\(p2.hp) HP"
+        statusText.text = "Let the battle begin!"
+        
+        
+        //hide and unhide needed objects
+        p1Image.hidden = false
+        p2Image.hidden = false
+        p1HpLbl.hidden = false
+        p2HpLbl.hidden = false
+        p1AttackBtn.hidden = false
+        p2AttackBtn.hidden = false
+        resetBtn.hidden = true
+        
+    }
+    
+    func setUpAudio() {
+        let path = NSBundle.mainBundle().pathForResource("bg", ofType: "mp3")
+        let soundURL = NSURL(fileURLWithPath: path!)
+        
+        do{
+            try bgMusic = AVAudioPlayer(contentsOfURL: soundURL)
+            bgMusic.prepareToPlay()
+        }
+        catch let err as NSError{
+            print(err.debugDescription)
+        }
+        
+        
+        bgMusic.play()
+        bgMusic.volume = 0.1
+    
+    }
 }
 

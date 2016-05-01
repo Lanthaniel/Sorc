@@ -7,12 +7,15 @@
 //
 
 import Foundation
+import AVFoundation
 
 class Character{
     
     private var _hp: Int = 100
     private var _attackPwr: Int = 10
     private var _name: String = "DefaultName"
+    private var _attackSound: AVAudioPlayer!
+    private var _deathSound: AVAudioPlayer!
     
     var hp: Int {
         get {
@@ -32,6 +35,18 @@ class Character{
         }
         set {
             _name = name
+        }
+    }
+    
+    var attackSound: AVAudioPlayer {
+        get {
+            return _attackSound
+        }
+    }
+    
+    var deathSound: AVAudioPlayer {
+        get {
+            return _deathSound
         }
     }
     
@@ -69,6 +84,33 @@ class Character{
             self._hp -= attackPwr
             return true
             
+        }
+    }
+    
+    //Set attack sound
+    func setAttackSound(sound: String, type: String) {
+        let path = NSBundle.mainBundle().pathForResource(sound, ofType: type)
+        let soundURL = NSURL(fileURLWithPath: path!)
+        
+        do{
+            try _attackSound = AVAudioPlayer(contentsOfURL: soundURL)
+            _attackSound.prepareToPlay()
+        }
+        catch let err as NSError{
+            print(err.debugDescription)
+        }
+    }
+    
+    func setDeathSound(sound: String, type: String) {
+        let path = NSBundle.mainBundle().pathForResource(sound, ofType: type)
+        let soundURL = NSURL(fileURLWithPath: path!)
+        
+        do{
+            try _deathSound = AVAudioPlayer(contentsOfURL: soundURL)
+            _deathSound.prepareToPlay()
+        }
+        catch let err as NSError{
+            print(err.debugDescription)
         }
     }
 }

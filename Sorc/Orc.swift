@@ -14,9 +14,16 @@ class Orc: Character {
     
     convenience init() {
         self.init(hp: 150, attackPwr: 10, name: "Orc Man")
+        setSounds();
     }
     
     convenience init(name: String) {
         self.init(hp: 150, attackPwr: 10, name: name)
+        setSounds();
+    }
+    
+    func setSounds() {
+        self.setDeathSound("OrcGrunt", type: "wav")
+        self.setAttackSound("Club", type: "wav")
     }
 }
